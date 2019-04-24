@@ -1,6 +1,5 @@
 #Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-#export VIRTUALENVWRAPPER_PYTHON=`which python'
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh # Only for local
 #source ~/.local/bin/virtualenvwrapper.sh  # For workstation
