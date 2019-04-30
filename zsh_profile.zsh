@@ -28,6 +28,9 @@ bindkey "^[e" end-of-line
 # Aliases
 alias tn="tmux -CC"
 alias ta="tmux -CC attach"
+alias t0="tmux -CC attach -t 0"
+alias t1="tmux -CC attach -t 1"
+alias t2="tmux -CC attach -t 2"
 alias vi="cd ~/Python/vita/"
 alias v1="ssh lorenzo@vita1"
 alias v2="ssh lorenzo@vita2"
