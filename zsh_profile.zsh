@@ -28,6 +28,7 @@ bindkey "^[e" end-of-line
 # Aliases
 alias tn="tmux -CC"
 alias ta="tmux -CC attach"
+alias tl="tmux list-sessions"
 alias t0="tmux -CC attach -t 0"
 alias t1="tmux -CC attach -t 1"
 alias t2="tmux -CC attach -t 2"
