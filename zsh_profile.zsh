@@ -4,11 +4,6 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh # Only for local
 #source ~/.local/bin/virtualenvwrapper.sh  # For workstation
 
-# Plugins
-plugins=(zsh-autosuggestions history-substring-search zsh-completions)
-autoload -U compinit && compinit
-source .oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 export HISTCONTROL=ignoredups
 
 # add hostname to right prompt
@@ -34,6 +29,7 @@ alias tl="tmux list-sessions"
 alias t0="tmux -CC attach -t 0"
 alias t1="tmux -CC attach -t 1"
 alias t2="tmux -CC attach -t 2"
+alias zs="nano ~/.zshrc"
 alias vi="cd ~/Python/vita/"
 alias v1="ssh lorenzo@vita1"
 alias v2="ssh lorenzo@vita2"
