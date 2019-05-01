@@ -5,7 +5,9 @@ source /usr/local/bin/virtualenvwrapper.sh # Only for local
 #source ~/.local/bin/virtualenvwrapper.sh  # For workstation
 
 # Plugins
-plugins=(zsh-autosuggestions)
+plugins=(zsh-autosuggestions history-substring-search zsh-completions)
+autoload -U compinit && compinit
+source .oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export HISTCONTROL=ignoredups
 
