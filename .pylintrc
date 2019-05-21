@@ -139,11 +139,12 @@ disable=print-statement,
         deprecated-sys-function,
         exception-escape,
         comprehension-escape,
+	
 	# My Additions
 	import-error,
 	no-name-in-module,
-	invalid-name
-	missing-docstring
+	invalid-name,
+	missing-docstring,
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
