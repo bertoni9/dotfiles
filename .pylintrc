@@ -7,7 +7,7 @@ good-names=ap,ar,ax,d,f,ff,ii,kk,dd,g,gt,i,im,lr,r,s,t,t1,t2,th,v,vs,x,x1,x2,xs,
 
 [TYPECHECK]
 
-disable=E1102,missing-docstring,useless-object-inheritance,duplicate-code,too-many-arguments,too-many-instance-attributes,too-many-locals,too-few-public-methods,import-error,no-name-in-module
+disable=E1102,missing-docstring,useless-object-inheritance,duplicate-code,too-many-arguments,too-many-instance-attributes,too-many-locals,too-few-public-methods,import-error,no-name-in-module, no-member
 
 [FORMAT]
 max-line-length=120
