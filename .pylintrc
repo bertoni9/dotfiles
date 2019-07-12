@@ -2,7 +2,7 @@
 
 [BASIC]
 
-good-names=ap,ar,ax,d,f,ff,ii,kk,dd,g,gt,i,im,lr,mu,bi,r,s,t,t0,t1,t2,th,v,vs,x,x1,x2,xx,xs,y,ys,xy,zz,uv,ww,hh
+good-names=ap,ar,ax,d,f,ff,ii,kk,dd,g,gt,i,im,lr,mu,bi,r,s,t,t0,t1,t2,th,v,vs,x,x1,x2,xx,xs,y,ys,xy,zz,uv,ww,hh,tt,el
 
 
 [TYPECHECK]
