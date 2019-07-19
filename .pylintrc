@@ -1,13 +1,25 @@
 
 
 [BASIC]
+variable-rgx=[a-z0-9_]{1,30}$  # to accept 2 (dfferent) letters variables
 
-good-names=ap,ar,ax,d,f,ff,ii,kk,dd,g,gt,i,im,lr,mu,bi,r,s,t,t0,t1,t2,th,v,vs,x,x1,x2,xx,xs,y,ys,xy,zz,uv,ww,hh,tt,el,yy
+
+Good-names=xx,dd,zz,hh,ww,pp,kk,lr,w1,w2,w3,COV_MIN,CONF_MIN
 
 
 [TYPECHECK]
 
-disable=E1102,missing-docstring,useless-object-inheritance,duplicate-code,too-many-arguments,too-many-instance-attributes,too-many-locals,too-few-public-methods,import-error,no-name-in-module, no-member
+disable=E1102,missing-docstring,useless-object-inheritance,duplicate-code,too-many-arguments,too-many-instance-attributes,too-many-locals,too-few-public-methods,arguments-differ,logging-format-interpolation
+
+
+# List of members which are set dynamically and missed by pylint inference
+# system, and so shouldn't trigger E1101 when accessed. Python regular
+# expressions are accepted.
+generated-members=numpy.*,torch.*,cv2.*
+
+ignored-modules=nuscenes, tabulate
+
+
 
 [FORMAT]
 max-line-length=120
