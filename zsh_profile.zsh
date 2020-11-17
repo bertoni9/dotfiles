@@ -60,6 +60,7 @@ alias vi="cd ~/Python/vita/"
 alias v4="ssh lorenzo@vita4"
 alias v100="ssh -A bertoni@10.91.1.25"
 alias iz="ssh -X bertoni@izar.epfl.ch"
+alias nv="nvidia-smi"
 
 # Git
 alias gs='git status'
