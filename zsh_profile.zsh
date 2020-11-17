@@ -1,7 +1,7 @@
 #Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh # Only for local
+#source /usr/local/bin/virtualenvwrapper.sh # Only for local
 #source ~/.local/bin/virtualenvwrapper.sh  # For workstation
 
 export HISTCONTROL=ignoredups
@@ -13,7 +13,7 @@ export RPROMPT='%{$fg[cyan]%}%m%{$reset_color%}'
 #zle_highlight=(default:bold)
 
 # ITERMPLOT
-export MPLBACKEND="module://itermplot"
+#export MPLBACKEND="module://itermplot"
 #export ITERMPLOT=rv
 
 #ITERM SCROLLING
@@ -22,21 +22,10 @@ bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 
-# Aliases
-alias tn="tmux -CC"
-alias ta="tmux -CC attach"
-alias tl="tmux list-sessions"
-alias t0="tmux -CC attach -t 0"
-alias t1="tmux -CC attach -t 1"
-alias t2="tmux -CC attach -t 2"
+#------------ Aliases ------------
+
+# General
 alias zs="nano ~/.zshrc"
-alias vi="cd ~/Python/vita/"
-alias v1="ssh lorenzo@vita1"
-alias v2="ssh lorenzo@vita2"
-alias v4="ssh lorenzo@vita4"
-alias v100="ssh -A bertoni@10.91.1.25"
-alias deac="deactivate"
-alias ali="nano ~/.oh-my-zsh/custom/zsh_profile.zsh"
 alias ref="source ~/.zshrc"
 alias l='ls'
 alias cd..="cd .."
@@ -46,13 +35,39 @@ alias ....='cd ../../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias c='clear'
-# Git alias
+alias deac="deactivate"
+alias ali="nano ~/.oh-my-zsh/custom/zsh_profile.zsh"
+
+# tmux
+alias tn="tmux -CC"
+alias ta="tmux -CC attach"
+alias tl="tmux list-sessions"
+alias t0="tmux -CC attach -t 0"
+alias t1="tmux -CC attach -t 1"
+alias t2="tmux -CC attach -t 2"
+alias t3="tmux -CC attach -t 3"
+alias t4="tmux -CC attach -t 4"
+alias t5="tmux -CC attach -t 5"
+alias tk0="tmux kill-session -t 0"
+alias tk1="tmux kill-session -t 1"
+alias tk2="tmux kill-session -t 2"
+alias tk3="tmux kill-session -t 3"
+alias tk4="tmux kill-session -t 4"
+alias tk5="tmux kill-session -t 5"
+
+# Custom
+alias vi="cd ~/Python/vita/"
+alias v4="ssh lorenzo@vita4"
+alias v100="ssh -A bertoni@10.91.1.25"
+alias iz="ssh -X bertoni@izar.epfl.ch"
+
+# Git
 alias gs='git status'
 alias gpush='git push origin master'
 alias gpull='git pull origin master'
+alias gprune='git remote update origin --prune'
 
 # Extract
-
 ex () {
    if [ -f "$1" ] ; then
        case "$1" in
