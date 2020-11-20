@@ -46,7 +46,10 @@ Many plugins are already available, a very useful but missing one is sintax high
 
 ## Make changes effective
 Clone this repository and rsync the into the custom folder of oh-my-zsh:
-`rsync -av zsh_profle.zsh  ~/.oh-my-zsh/custom/`
+```
+git clone git@github.com:bertoni9/dotfiles.git
+rsync -av dotfiles/zsh_profle.zsh  ~/.oh-my-zsh/custom/
+```
 
 Change the line in the .zshrc file that contains the plugins to activate by substituting it with the following (or the one you like)
 
