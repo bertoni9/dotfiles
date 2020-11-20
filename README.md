@@ -59,3 +59,6 @@ Many more plugins are available, read more in their [official page](https://gith
 
 ## SSH Key to Github account
 Very helpful to working with Github without typing every time username and password. Steps well explained in the [official website](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+
+If you already have a repository with https url (always asking for username and password), after setting a ssh key: \
+`git remote set-url origin <ssh-url>`
