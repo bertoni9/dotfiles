@@ -21,7 +21,9 @@ To make it your default shell:
 
 
 
-### HPC Clusters (thanks to @svenkreiss)
+### HPC Clusters
+Thanks to @svenkreiss.
+
 Changing default shell is often not supported, but you can launch your shell from .bash_profile if you detect you are interactive mode. Only change shell when in interactive mode, otherwise job submission with sbatch will not work. 
 First, verfy the path of the installed zsh with: \
 `which zsh` \
