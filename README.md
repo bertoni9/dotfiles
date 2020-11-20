@@ -1,5 +1,5 @@
 # Configuration files 
-This repository contains the dotfiles and all the information to configure both a local laptop (I use macbook with Iterm2 as terminal) and any remote machine. When not specified instructions work both for remote Linux machines and local macbook.
+This repository contains the dotfiles and all the information to configure both a local laptop (I use macbook with Iterm2 as terminal) and remote Linux machines. When not specified differently, instructions have to be repeated locally and remotely.
 
 ## Install Iterm2 (for Mac)
 
@@ -17,8 +17,6 @@ Zsh should be installed, and then execute
 To make it your default shell:
 
 `chsh -s /usr/bin/zsh`
-
-
 
 
 ### HPC Clusters
