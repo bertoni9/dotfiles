@@ -1,21 +1,24 @@
 # Configuration files 
-This repository contains the dotfiles and all the information to configure both a local laptop (I use macbook with Iterm2 as terminal) and any remote machine. I use this configuration every day do to research in computer vision and deep learning.
+This repository contains the dotfiles and all the information to configure both a local laptop (I use macbook with Iterm2 as terminal) and any remote machine. When not specified instructions work both for remote Linux machines and local macbook.
 
-## Prepare your laptop / workstation
+## Install Iterm2 (for Mac)
 
-### Install Oh My Zsh
+Download: https://www.iterm2.com/downloads.html
+
+A nice tip from https://github.com/svenkreiss/dotfiles is to save iterm iterm2 preferences in a custom folder (or use the ones provided). To load them: preferences --> general --> preferences
+
+## Install Oh My Zsh
 
 Zsh should be installed, and then execute
 
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 
-### Make it your default shell (if not done by Oh My Zsh)
-For HPC clusters, it proably won't work, go to the next point.
+To make it your default shell:
 
-`chsh -s /usr/bin/zsh`   (still necessary for tmux for example as its default remains bash)
+`chsh -s /usr/bin/zsh`
 
-`tmux kill-server (to make sure to restart tmux server)`
+
 
 
 ### HPC Clusters (thanks to @svenkreiss)
@@ -32,7 +35,7 @@ fi
 ```
 
 
-### Plugins
+## Plugins
 Many plugins are already available, a very useful but missing one is sintax highlighting.
 
 * Add Sintax Highlighting \
@@ -41,7 +44,7 @@ Many plugins are already available, a very useful but missing one is sintax high
   `git clone git://github.com/zsh-users/zsh-syntax-highlighting.git`
 
 
-### Make changes effective
+## Make changes effective
 Clone this repository and rsync the into the custom folder of oh-my-zsh:
 `rsync -av zsh_profle.zsh  ~/.oh-my-zsh/custom/`
 
@@ -51,5 +54,5 @@ Change the line in the .zshrc file that contains the plugins to activate by subs
 
 Many more plugins are available, read more in their [official page](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
-### SSH Key to Github account
+## SSH Key to Github account
 Very helpful to working with Github without typing every time username and password. Steps well explained in the [official website](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
