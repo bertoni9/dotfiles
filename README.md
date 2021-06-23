@@ -1,15 +1,25 @@
-# Configuration files 
+
+# MacBook and Servers Configuration
 This repository contains the dotfiles and all the information to configure both a local laptop (I use macbook with Iterm2 as terminal) and remote Linux machines. When not specified differently, instructions have to be repeated locally and remotely.
+
+## Install HomeBrew and Git
+
+`xcode-select —-install`
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
 
 ## Install Iterm2 (for Mac)
 
-Download: https://www.iterm2.com/downloads.html
+`brew cask install iterm2`
 
-A nice tip from https://github.com/svenkreiss/dotfiles is to save iterm iterm2 preferences in a custom folder (or use the ones provided). To load them: preferences --> general --> preferences
+A nice tip from https://github.com/svenkreiss/dotfiles is to save iterm iterm2 preferences in a custom folder (or use the ones provided). To load them: preferences --> general --> preferences (pointing at `dotfiles/iterm2` for example).
+Similarly, you can load the profiles  `dotfiles/iterm2/Profiles.json` into Preferences --> profiles.
 
 ## Install Oh My Zsh
+Install zsh with: 
+`brew install zsh`
 
-Zsh should be installed, and then execute
+Oh My Zsh:
 
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
