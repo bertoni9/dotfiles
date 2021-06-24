@@ -46,13 +46,15 @@ fi
 
 
 ## Plugins
-Many plugins are already available, a very useful but missing one is sintax highlighting.
+Many plugins are already available, I use:
 
-* Add Sintax Highlighting \
-`cd ~/.oh-my-zsh/custom/plugins` 
+- History-Substring-search
 
-  `git clone git://github.com/zsh-users/zsh-syntax-highlighting.git`
+ `git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search`
 
+- Sintax Highlighting
+
+`git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 
 ## Make changes effective
 Clone this repository and rsync the into the custom folder of oh-my-zsh:
@@ -63,6 +65,9 @@ rsync -av dotfiles/zsh_profile.zsh  ~/.oh-my-zsh/custom/
 
 Change the line in the .zshrc file that contains the plugins to activate by substituting it with the following (or the one you like)
 
+`nano ~/.zshrc`
+
+And add:
 *plugins=(git history-substring-search  zsh-syntax-highlighting)*
 
 Many more plugins are available, read more in their [official page](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
