@@ -5,6 +5,11 @@ export PROJECT_HOME=$HOME/Devel
 #source /usr/local/bin/virtualenvwrapper.sh # Only for local
 #source ~/.local/bin/virtualenvwrapper.sh  # For workstation
 
+#Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 export HISTCONTROL=ignoredups
 
 # add hostname to right prompt
@@ -58,6 +63,7 @@ alias tk4="tmux kill-session -t 4"
 alias tk5="tmux kill-session -t 5"
 
 # Custom
+alias ma="ssh lorenzo@mars"
 alias vi="cd ~/Python/vita/"
 alias v4="ssh lorenzo@vita4"
 alias v100="ssh -A bertoni@10.91.1.25"

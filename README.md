@@ -2,22 +2,25 @@
 # MacBook and Servers Configuration
 This repository contains the dotfiles and all the information to configure both a local laptop (I use macbook with Iterm2 as terminal) and remote Linux machines. When not specified differently, instructions have to be repeated locally and remotely.
 
-## Install HomeBrew and Git
+## Mac - Install HomeBrew and Git
 
 `xcode-select —-install`
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 
-## Install Iterm2 (for Mac)
+## Mac - Install Iterm2
 
 `brew cask install iterm2`
+
+### Miscellaneous packages
+`brew install rynsc git`
 
 A nice tip from https://github.com/svenkreiss/dotfiles is to save iterm iterm2 preferences in a custom folder (or use the ones provided). To load them: preferences --> general --> preferences (pointing at `dotfiles/iterm2` for example).
 Similarly, you can load the profiles  `dotfiles/iterm2/Profiles.json` into Preferences --> profiles.
 
-## Install Oh My Zsh
+## All - Install Oh My Zsh
 Install zsh with: 
-`brew install zsh`
+`brew install zsh` (for mac)
 
 Oh My Zsh:
 
@@ -28,11 +31,22 @@ To make it your default shell:
 
 `chsh -s /usr/bin/zsh`
 
+### Plugins
+Many plugins are already available, I use:
+
+- History-Substring-search
+
+ `git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search`
+
+- Sintax Highlighting
+
+`git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+
 
 ### HPC Clusters
 Thanks to @svenkreiss.
 
-Changing default shell is often not supported, but you can launch your shell from .bash_profile if you detect you are interactive mode. Only change shell when in interactive mode, otherwise job submission with sbatch will not work. 
+Changing default shell may not be supported, but you can launch your shell from .bash_profile if you detect you are interactive mode. Only change shell when in interactive mode, otherwise job submission with sbatch will not work. 
 First, verfy the path of the installed zsh with: \
 `which zsh` \
 Then add at the end of .bash_profile the following (careful about indentation, avoid copy-paste): 
@@ -45,18 +59,7 @@ fi
 ```
 
 
-## Plugins
-Many plugins are already available, I use:
-
-- History-Substring-search
-
- `git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search`
-
-- Sintax Highlighting
-
-`git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
-
-## Make changes effective
+##  All - Make changes effective
 Clone this repository and rsync the into the custom folder of oh-my-zsh:
 ```
 git clone git@github.com:bertoni9/dotfiles.git
@@ -72,8 +75,18 @@ And add:
 
 Many more plugins are available, read more in their [official page](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
-## SSH Key to Github account
+## All - SSH Key to Github account
 Very helpful to working with Github without typing every time username and password. Steps well explained in the [official website](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
 If you already have a repository with https url (always asking for username and password), after setting a ssh key: \
 `git remote set-url origin <ssh-url>`
+
+## Mac - Install Python3
+As Python2 is used as default in the system, it's convenient to use **pyenv** to set the right Python version.
+
+```
+brew install pyenv
+pyenv install 3.8.10
+pyenv global 3.8.10
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+ ```
