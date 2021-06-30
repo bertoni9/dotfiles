@@ -6,9 +6,9 @@ export PROJECT_HOME=$HOME/Devel
 #source ~/.local/bin/virtualenvwrapper.sh  # For workstation
 
 #Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
 
 export HISTCONTROL=ignoredups
 
