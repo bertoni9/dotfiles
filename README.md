@@ -42,6 +42,17 @@ Many plugins are already available, I use:
 
 `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 
+### Forward SSH Key
+To avoid creating a new SSH in each remote machine, we can forward the agent when we ssh by changing the ssh settings
+`touch ~/.ssh/config`
+and then copy the following:
+```
+Host *
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardAgent yes
+    UseKeychain yes
+    AddKeysToAgent yes
+```
 
 ### HPC Clusters
 Thanks to @svenkreiss.
