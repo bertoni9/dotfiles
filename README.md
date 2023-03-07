@@ -13,7 +13,7 @@ This repository contains the dotfiles and all the information to configure both 
 `brew cask install iterm2`
 
 ### Miscellaneous packages
-`brew install rynsc git`
+`brew install rynsc git tmux`
 
 A nice tip from https://github.com/svenkreiss/dotfiles is to save iterm iterm2 preferences in a custom folder (or use the ones provided). To load them: preferences --> general --> preferences (pointing at `dotfiles/iterm2` for example).
 Similarly, you can load the profiles  `dotfiles/iterm2/Profiles.json` into Preferences --> profiles.
