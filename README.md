@@ -101,3 +101,25 @@ pyenv install 3.8.10
 pyenv global 3.8.10
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
  ```
+
+## Dev Server - Install Graphite
+`npm install -g @withgraphite/graphite-cli` does not work without sudo access. Neither did installing it from source. if `npm` is already installed in the server: 
+```bash
+mkdir ~/.npm-packages
+npm config set prefix ~/.npm-packages
+export PATH="$HOME/.npm-packages/bin:$PATH"
+npm install -g @withgraphite/graphite-cli
+```
+Then check that the installation went well with:
+```bash
+npm list -g @withgraphite/graphite-cli
+```
+then open `.zshrc` and add
+```bash
+export PATH="$HOME/.npm-packages/lib:$PATH"
+```
+To check everything went well:
+```bash
+source ~/.zshrc
+gt --version
+```
