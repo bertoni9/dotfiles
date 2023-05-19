@@ -114,7 +114,7 @@ Then check that the installation went well with:
 ```bash
 npm list -g @withgraphite/graphite-cli
 ```
-then open `.zshrc` and add
+then open `.zsh_profile.zsh` (if it's not already there) and add
 ```bash
 export PATH="$HOME/.npm-packages/lib:$PATH"
 ```
