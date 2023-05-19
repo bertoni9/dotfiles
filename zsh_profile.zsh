@@ -1,19 +1,12 @@
-# Virtualenvwrapper
-# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3  # For local without python2
-# export WORKON_HOME=$HOME/.virtualenvs
-# export PROJECT_HOME=$HOME/Devel
-# source /usr/local/bin/virtualenvwrapper.sh # Only for local
-# source ~/.local/bin/virtualenvwrapper.sh  # For workstation
-
-#Pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-
+# ------------ Exports ------------
+# improved history
 export HISTCONTROL=ignoredups
 
 # add hostname to right prompt
 export RPROMPT='%{$fg[cyan]%}%m%{$reset_color%}'
+
+# Graphite CLI (without SUDO)
+ export PATH="$HOME/.npm-packages/bin:$PATH"
 
 # Add bold
 #zle_highlight=(default:bold)
@@ -61,10 +54,6 @@ alias tk2="tmux kill-session -t 2"
 alias tk3="tmux kill-session -t 3"
 alias tk4="tmux kill-session -t 4"
 alias tk5="tmux kill-session -t 5"
-
-# Custom
-# to be added
-
 
 # Git
 alias gs='git status'
