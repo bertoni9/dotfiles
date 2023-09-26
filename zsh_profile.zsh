@@ -62,15 +62,6 @@ alias tk3="tmux kill-session -t 3"
 alias tk4="tmux kill-session -t 4"
 alias tk5="tmux kill-session -t 5"
 
-# Custom
-alias ma="ssh lorenzo@mars"
-alias vi="cd ~/Python/vita/"
-alias v4="ssh lorenzo@vita4"
-alias v100="ssh -A bertoni@10.91.1.25"
-alias iz="ssh bertoni@izar.epfl.ch"
-alias sq="squeue -A vita"
-
-
 # Git
 alias gs='git status'
 alias gd='git diff'
